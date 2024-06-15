@@ -1,12 +1,11 @@
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const User = require("../model/user.model");
+const User = require("../models/user.model");
 const logger = require("../utils/logger");
 const config = require("../utils/config");
 
 // @desc register new user controller logic
 const signup = async (req, res) => {
-  console.log("Here");
   try {
     const { fullName, email, password } = req.body;
 
@@ -54,13 +53,13 @@ const login = async (req, res) => {
     }
 
     // check if password is correct with the one in DB
-    const isPasswordCorrect = await bcrypt.compare(password, user.password);
+    const isPasswordCorrect = bcrypt.compare(password, user.password);
     if (!isPasswordCorrect) {
       return res.status(400).json({ status: "error", message: "Invalid email or password" });
     }
 
     // generate token
-    const accessToken = await jwt.sign({ id: user._id }, config.JWT_SECRET, { expiresIn: 5 * 60 });
+    const accessToken = jwt.sign({ id: user._id }, config.JWT_SECRET, { expiresIn: 50 * 60 });
 
     res.status(200).json({
       status: "success",
@@ -75,7 +74,7 @@ const login = async (req, res) => {
       }
     });
   } catch (error) {
-    logger.error("Error occured in login controller", error);
+    logger.error("Error occurred in login controller", error);
     res.status(500).json({ status: "error", message: "Internal Server Error" });
   }
 };

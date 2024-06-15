@@ -1,7 +1,7 @@
 Functional Requirements
 - Users can login  ✅
 - Users can register  ✅
-- Only registered users can create recipes
+- Only registered users can create recipes ✅
 - Users can categories recipes
 - Users can share recipes
 - Users can search recipes

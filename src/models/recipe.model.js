@@ -34,15 +34,15 @@ const recipeSchema = new mongoose.Schema(
     },
     ingredients: [ingredientSchema],
     instructions: [instructionSchema],
-    prepTime: {
+    prepTimeInMinutes: {
       type: Number, // in minutes
       required: true
     },
-    cookTime: {
+    cookTimeInMinutes: {
       type: Number, // in minutes
       required: true
     },
-    servings: {
+    numberOfServings: {
       type: Number,
       required: true
     },
