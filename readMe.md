@@ -1,3 +1,5 @@
+# Recipe App v1
+
 Hello all,
 
 This is the updated code for the Mastering Backend Nodejs alpha-cohort-2, as per 08/06/24 class.
@@ -5,9 +7,10 @@ This is the updated code for the Mastering Backend Nodejs alpha-cohort-2, as per
 Read below guidelines to follow the separation of concerns:
 
 1. Create utils folder on the root of the project
-- Add .env file at the root of the project. Inside add your server port number e.g PORT=5000, and your database connection string.
-- Add a config.js file. (Make sure to have dotenv package installed)
-- Add a logger.js file // This is for console.log/error easily
+
+   - Add .env file at the root of the project. Inside add your server port number e.g PORT=5000, and your database connection string.
+   - Add a config.js file. (Make sure to have dotenv package installed)
+   - Add a logger.js file // This is for console.log/error easily
 
 2. Create a db folder and inside add mongoDB.js, then proceed to add the logic as illustrated on the code to connect to the database.
 
@@ -23,7 +26,7 @@ Read below guidelines to follow the separation of concerns:
 
 8. Start your server and test the endpoint to create a new user.
 
-Incase of any challenge feel free to reach out on whatsapp: +254769789528 or email: fideliofidel9@gmail.com 
+Should you have any challenge feel free to reach out on whatsapp: +254769789528 or email: <fideliofidel9@gmail.com>
 
 Thank you for reading this guide.
 

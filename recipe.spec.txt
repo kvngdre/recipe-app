@@ -11,7 +11,7 @@ Functional Requirements
 
 Non-Functional Requirements
 - Response time should be below 50ms
-- High availability upto 99.999
+- High availability up to 99.999
 - Error handling, ensure to respond with the accurate error message
 - Security, ensure all protected routes are guarded
 - A well organized code-base that is easy to understand and modify
