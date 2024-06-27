@@ -1,3 +1,4 @@
+const { required } = require("joi");
 const mongoose = require("mongoose");
 const { ObjectId } = mongoose.Schema;
 
@@ -22,6 +23,32 @@ const instructionSchema = new mongoose.Schema({
         required: true
     },
 });
+
+const ratingSchema = new mongoose.Schema({
+    rating: {
+        type: Number,
+        required: true,
+        min: 0,
+        max: 5
+    },
+    ratedBy: {
+        type: ObjectId,
+        ref: "User",
+        required: true,
+    },
+});
+
+const commentsSchema = new mongoose.Schema({
+    body: {
+        type: String,
+        required: true,
+    },
+    commentedBy: {
+        type: ObjectId,
+        ref: "User",
+        required: true,
+    },
+})
 
 const recipeSchema = new mongoose.Schema({
     title: {
@@ -67,6 +94,21 @@ const recipeSchema = new mongoose.Schema({
     createdBy: {
         type: ObjectId,
         ref: "User",
+        required: true,
+    },
+    user: {
+        type: ObjectId,
+        ref: "User",
+        required: true,
+    },
+    rating: { 
+        type: [ratingSchema],
+        default: "",
+        required: true,
+    },
+    comments: {
+        type: [commentsSchema],
+        default: "",
         required: true,
     },
 },
