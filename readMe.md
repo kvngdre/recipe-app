@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 # Recipe App v1
 
 Hello all,
+=======
+# Hello all
+>>>>>>> master
 
 This is the updated code for the Mastering Backend Nodejs alpha-cohort-2, as per 08/06/24 class.
 
@@ -9,6 +13,10 @@ Read below guidelines to follow the separation of concerns:
 1. Create utils folder on the root of the project
 
    - Add .env file at the root of the project. Inside add your server port number e.g PORT=5000, and your database connection string.
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
    - Add a config.js file. (Make sure to have dotenv package installed)
    - Add a logger.js file // This is for console.log/error easily
 
@@ -26,8 +34,11 @@ Read below guidelines to follow the separation of concerns:
 
 8. Start your server and test the endpoint to create a new user.
 
+<<<<<<< HEAD
 Should you have any challenge feel free to reach out on whatsapp: +254769789528 or email: <fideliofidel9@gmail.com>
 
+=======
+>>>>>>> master
 Thank you for reading this guide.
 
 Happy Coding!

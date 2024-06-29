@@ -2,20 +2,39 @@ Functional Requirements
 - Users can login  ✅
 - Users can register  ✅
 - Only registered users can create recipes ✅
+<<<<<<< HEAD
 - Users can categories recipes
+=======
+- Users can categorize recipes ✅
+>>>>>>> master
 - Users can share recipes
 - Users can search recipes
-- Only recipe owner can modify/ update recipes
-- Only recipe owner can delete recipes
+    - Search by category ✅
+    - Search by difficulty ✅
+    - Search ny title ✅
+    - Random search ✅
+    - Search by cookingTime ✅ and prepTime range ✅ 
+    - Search by ingredients ✅
+- Only recipe owner can modify/ update recipes ✅
+- Only recipe owner can delete recipes ✅
 - Users can comment/ rate recipes
 
 Non-Functional Requirements
 - Response time should be below 50ms
+<<<<<<< HEAD
 - High availability up to 99.999
 - Error handling, ensure to respond with the accurate error message
 - Security, ensure all protected routes are guarded
 - A well organized code-base that is easy to understand and modify
 - API documentation for the endpoint usability
 - Best RESTful API design practices
+=======
+- High availability upto 99.999
+- Error handling, ensure to respond with the accurate error message ✅
+- Security, ensure all protected routes are guarded ✅
+- A well organized code-base that is easy to understand and modify ✅
+- API documentation for the endpoint usability ✅
+- Best RESTful API design practices ✅
+>>>>>>> master
 - Scalability, registered users, recipes and traffic
-- Observability: e.g morgan
+- Observability: e.g morgan ✅

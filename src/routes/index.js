@@ -7,6 +7,7 @@ router.use("/users", userRoutes);
 router.use("/recipes", recipeRoutes);
 
 router.get("/", (req, res) => {
+<<<<<<< HEAD
   res.status(200).json({ status: "success", message: "Welcome to Recipe API" });
 });
 
@@ -15,3 +16,13 @@ router.all("*", (req, res) => {
 });
 
 module.exports = router;
+=======
+    res.status(200).json({ status: "success", message: "Welcome to Recipe API" })
+});
+
+router.all('*', (req, res) => {
+    res.status(404).json({ status: "error", message: `Can't find ${req.originalUrl} on the server` })
+});
+
+module.exports = router;
+>>>>>>> master
